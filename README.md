@@ -1,15 +1,15 @@
-1)Overview:-
++ 1)Overview:-
 The exponential growth of Internet of Vehicles (IoV) has heightened the need for intelligent and robust cybersecurity solutions. This project introduces MTH-IDS, a Multi-Tiered Hybrid Intrusion Detection System that integrates both Machine Learning (ML) and Deep Learning (DL) to identify malicious network behaviors across vehicular networks. MTH-IDS is designed to enhance detection accuracy while ensuring scalability and low latency suitable for real-time applications in IoV environments.
 
-2)Objective
++ 2)Objective
 
 To develop and evaluate a hybrid, layered IDS model that:
 Detects intrusions in vehicular ad-hoc networks (VANETs) with high accuracy. Combines the strengths of multiple ML and DL algorithms. Implements tiered filtering for computational efficiency and hierarchical threat detection. Enhances the reliability of smart transportation systems.
 
-3)Dataset
++ 3)Dataset
 CICIDS2017 :- A widely-used dataset for evaluating intrusion detection models. It contains realistic network traffic, including benign and attack scenarios (e.g., DDoS, PortScan, Botnet, Infiltration, etc.)
 
-4)Preprocessing Steps:
++ 4)Preprocessing Steps:
 
   1.Null value removal :-  Converts categorical string labels into numerical values so they can be used in model.
 
@@ -19,7 +19,7 @@ CICIDS2017 :- A widely-used dataset for evaluating intrusion detection models. I
 
   4.One-hot encoding for multiclass labels :- Converts multiclass labels into a binary matrix (one column per class), necessary for neural networks.
 
-5)Model Architecture
++ 5)Model Architecture
 The MTH-IDS architecture consists of three hierarchical layers:
 
 Layer 1: Anomaly Detection (Binary Classification)
@@ -60,7 +60,7 @@ Architecture:
 
 4.Softmax output for multi-class classification
 
-6)Why Multiple Models Were Used
++ 6)Why Multiple Models Were Used
    
 In this multi-tiered intrusion detection system (IDS) for Internet of Vehicles (IoV), a hybrid ensemble approach was employed to maximize accuracy, robustness, and generalization across different layers of classification. Here's why multiple models were used:
 
@@ -75,7 +75,7 @@ In this multi-tiered intrusion detection system (IDS) for Internet of Vehicles (
 5. Stacking Classifier :- Meta-ensemble that combines multiple base models. Trains a final classifier on the predictions of previous models. Used to capture complementary strengths of different models and improve overall prediction accuracy.
    
 
-Note: - This project is a replication and exploration of the research work titled "Multi-Tiered Hybrid Intrusion Detection System (MTH-IDS) for the Internet of Vehicles (IoV)".  I am not the original author of this research or the model architecture. I was highly intrigued by the methodology and effectiveness of the proposed system. Therefore, I chose to replicate the project using publicly available datasets and libraries, primarily for learning, experimentation, and further exploration.
+* Note: - This project is a replication and exploration of the research work titled "Multi-Tiered Hybrid Intrusion Detection System (MTH-IDS) for the Internet of Vehicles (IoV)".  I am not the original author of this research or the model architecture. I was highly intrigued by the methodology and effectiveness of the proposed system. Therefore, I chose to replicate the project using publicly available datasets and libraries, primarily for learning, experimentation, and further exploration.
 
 You can find the original research paper here for reference:- https://arxiv.org/pdf/2105.13289
 
