@@ -1,23 +1,23 @@
-+ 1)Overview:-
+ 1)Overview:-
 The exponential growth of Internet of Vehicles (IoV) has heightened the need for intelligent and robust cybersecurity solutions. This project introduces MTH-IDS, a Multi-Tiered Hybrid Intrusion Detection System that integrates both Machine Learning (ML) and Deep Learning (DL) to identify malicious network behaviors across vehicular networks. MTH-IDS is designed to enhance detection accuracy while ensuring scalability and low latency suitable for real-time applications in IoV environments.
 
-+ 2)Objective
+2)Objective
 
 To develop and evaluate a hybrid, layered IDS model that:
 Detects intrusions in vehicular ad-hoc networks (VANETs) with high accuracy. Combines the strengths of multiple ML and DL algorithms. Implements tiered filtering for computational efficiency and hierarchical threat detection. Enhances the reliability of smart transportation systems.
 
-+ 3)Dataset
+3)Dataset
 CICIDS2017 :- A widely-used dataset for evaluating intrusion detection models. It contains realistic network traffic, including benign and attack scenarios (e.g., DDoS, PortScan, Botnet, Infiltration, etc.)
 
-+ 4)Preprocessing Steps:
+4)Preprocessing Steps:
 
-  1.Null value removal :-  Converts categorical string labels into numerical values so they can be used in model.
+  + Null value removal :-  Converts categorical string labels into numerical values so they can be used in model.
 
-  2.Label encoding for categorical features :- Scales feature values to a standard range (0 to 1), improving model convergence and performance.
+  + Label encoding for categorical features :- Scales feature values to a standard range (0 to 1), improving model convergence and performance.
 
-  3.Feature scaling (MinMaxScaler) :- Scales feature values to a standard range (0 to 1), improving model convergence and performance.
+  + Feature scaling (MinMaxScaler) :- Scales feature values to a standard range (0 to 1), improving model convergence and performance.
 
-  4.One-hot encoding for multiclass labels :- Converts multiclass labels into a binary matrix (one column per class), necessary for neural networks.
+  + One-hot encoding for multiclass labels :- Converts multiclass labels into a binary matrix (one column per class), necessary for neural networks.
 
 + 5)Model Architecture
 The MTH-IDS architecture consists of three hierarchical layers:
