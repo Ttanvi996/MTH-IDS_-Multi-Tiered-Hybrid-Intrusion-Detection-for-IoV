@@ -22,7 +22,7 @@ CICIDS2017 :- A widely-used dataset for evaluating intrusion detection models. I
 5)Model Architecture
 The MTH-IDS architecture consists of three hierarchical layers:
 
-+ Layer 1: Anomaly Detection (Binary Classification)
+Layer 1: Anomaly Detection (Binary Classification)
 
 + Goal : Differentiate between benign and malicious traffic. 
 
@@ -32,47 +32,35 @@ The MTH-IDS architecture consists of three hierarchical layers:
 
 + Output: Flags suspicious entries to be further processed.
 
-+ Layer 2: Attack Family Classification (Multi-Class)
+Layer 2: Attack Family Classification (Multi-Class)
 
 + Goal: Classify detected malicious traffic into broad categories (e.g., DDoS, Web attacks).
 
-Explanation :- This layer deals with multiple attack categories (e.g., DoS Hulk, DDoS, PortScan, etc.). A new subset of the data is created excluding benign traffic. Labels are retained as-is to train a classifier on attack types.
++ Explanation :- This layer deals with multiple attack categories (e.g., DoS Hulk, DDoS, PortScan, etc.). A new subset of the data is created excluding benign traffic. Labels are retained as-is to train a classifier on attack types.
 
-Model : XGBoost Classifier
++ Model : XGBoost Classifier
 
-Output: Filters and forwards samples for fine-grained analysis.
++ Output: Filters and forwards samples for fine-grained analysis.
 
 Layer 3: Fine-Grained Attack Identification (Multiclass Deep Learning)
 
-Goal: Identify specific attack types within families.
++ Goal: Identify specific attack types within families.
 
-Explanation :- Layer 3 uses a Deep Learning model (MLP) to classify attack types at a granular level. Labels are one-hot encoded using to_categorical(). Features are scaled. Output with softmax for multi-class classification
++ Explanation :- Layer 3 uses a Deep Learning model (MLP) to classify attack types at a granular level. Labels are one-hot encoded using to_categorical(). Features are scaled. Output with softmax for multi-class classification
 
-Model: Multi-Layer Perceptron (MLP) using TensorFlow/Keras
-
-Architecture:
-
-1.Input: Preprocessed features
-
-2.Dense layers with ReLU activation
-
-3.Dropout layers for regularization
-
-4.Softmax output for multi-class classification
-
-+ 6)Why Multiple Models Were Used
+5)Why Multiple Models Were Used
    
 In this multi-tiered intrusion detection system (IDS) for Internet of Vehicles (IoV), a hybrid ensemble approach was employed to maximize accuracy, robustness, and generalization across different layers of classification. Here's why multiple models were used:
 
-1. Decision Tree Classifier :-Acts as a simple, interpretable baseline. Useful for benchmarking and understanding data splits.
++ Decision Tree Classifier :-Acts as a simple, interpretable baseline. Useful for benchmarking and understanding data splits.
 
-2. Random Forest Classifier :- An ensemble of decision trees. Reduces overfitting and improves stability. Used for binary classification in the first layer.
++ Random Forest Classifier :- An ensemble of decision trees. Reduces overfitting and improves stability. Used for binary classification in the first layer.
 
-3. Extra Trees Classifier :- Similar to Random Forest but more randomized. Provides faster training and better variance reduction.
++ Extra Trees Classifier :- Similar to Random Forest but more randomized. Provides faster training and better variance reduction.
 
-4. XGBoost Classifier :- Gradient boosting model known for speed and performance. Used in multiclass scenarios for detecting specific attack families.
++ XGBoost Classifier :- Gradient boosting model known for speed and performance. Used in multiclass scenarios for detecting specific attack families.
 
-5. Stacking Classifier :- Meta-ensemble that combines multiple base models. Trains a final classifier on the predictions of previous models. Used to capture complementary strengths of different models and improve overall prediction accuracy.
++ Stacking Classifier :- Meta-ensemble that combines multiple base models. Trains a final classifier on the predictions of previous models. Used to capture complementary strengths of different models and improve overall prediction accuracy.
    
 
 * Note: - This project is a replication and exploration of the research work titled "Multi-Tiered Hybrid Intrusion Detection System (MTH-IDS) for the Internet of Vehicles (IoV)".  I am not the original author of this research or the model architecture. I was highly intrigued by the methodology and effectiveness of the proposed system. Therefore, I chose to replicate the project using publicly available datasets and libraries, primarily for learning, experimentation, and further exploration.
