@@ -10,26 +10,30 @@ Detects intrusions in vehicular ad-hoc networks (VANETs) with high accuracy. Com
 CICIDS2017 :- A widely-used dataset for evaluating intrusion detection models. It contains realistic network traffic, including benign and attack scenarios (e.g., DDoS, PortScan, Botnet, Infiltration, etc.)
 
 4)Preprocessing Steps:
-1.Null value removal
-2.Label encoding for categorical features
-3.Feature scaling (MinMaxScaler)
-4.One-hot encoding for multiclass labels
+1.Null value removal :-  Converts categorical string labels into numerical values so they can be used in model.
+2.Label encoding for categorical features :- Scales feature values to a standard range (0 to 1), improving model convergence and performance.
+3.Feature scaling (MinMaxScaler) :- Scales feature values to a standard range (0 to 1), improving model convergence and performance.
+4.One-hot encoding for multiclass labels :- Converts multiclass labels into a binary matrix (one column per class), necessary for neural networks.
 
 5)Model Architecture
 The MTH-IDS architecture consists of three hierarchical layers:
 
 Layer 1: Anomaly Detection (Binary Classification)
-Goal : Differentiate between benign and malicious traffic.
+Goal : Differentiate between benign and malicious traffic. T
+Explanation :-  The Label column is transformed into binary classes: 'BENIGN' vs. 'ATTACK'. All non-benign entries are grouped as 'ATTACK'.
 Models :Random Forest Classifier and Gradient Boosting Classifier
 Output: Flags suspicious entries to be further processed.
 
 Layer 2: Attack Family Classification (Multi-Class)
 Goal: Classify detected malicious traffic into broad categories (e.g., DDoS, Web attacks).
+Explanation :- This layer deals with multiple attack categories (e.g., DoS Hulk, DDoS, PortScan, etc.). A new subset of the data is created excluding benign traffic. Labels are retained as-is to train a classifier on attack types.
 Model : XGBoost Classifier
 Output: Filters and forwards samples for fine-grained analysis.
 
 Layer 3: Fine-Grained Attack Identification (Multiclass Deep Learning)
 Goal: Identify specific attack types within families.
+Explanation :- Layer 3 uses a Deep Learning model (MLP) to classify attack types at a granular level. Labels are one-hot encoded using to_categorical(). Features are scaled.
+Output with softmax for multi-class classification
 Model: Multi-Layer Perceptron (MLP) using TensorFlow/Keras
 Architecture:
 1.Input: Preprocessed features
