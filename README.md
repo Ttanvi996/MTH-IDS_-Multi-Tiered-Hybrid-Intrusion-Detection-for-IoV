@@ -4,13 +4,7 @@ The exponential growth of Internet of Vehicles (IoV) has heightened the need for
 2)Objective
 
 To develop and evaluate a hybrid, layered IDS model that:
-1. Detects intrusions in vehicular ad-hoc networks (VANETs) with high accuracy.
-   
-2.Combines the strengths of multiple ML and DL algorithms.
-
-3.Implements tiered filtering for computational efficiency and hierarchical threat detection.
-
-4.Enhances the reliability of smart transportation systems.
+Detects intrusions in vehicular ad-hoc networks (VANETs) with high accuracy. Combines the strengths of multiple ML and DL algorithms. Implements tiered filtering for computational efficiency and hierarchical threat detection. Enhances the reliability of smart transportation systems.
 
 3)Dataset
 CICIDS2017 :- A widely-used dataset for evaluating intrusion detection models. It contains realistic network traffic, including benign and attack scenarios (e.g., DDoS, PortScan, Botnet, Infiltration, etc.)
