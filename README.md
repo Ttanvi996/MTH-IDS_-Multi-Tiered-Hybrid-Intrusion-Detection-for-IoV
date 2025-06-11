@@ -45,18 +45,16 @@ Architecture:
 3.Dropout layers for regularization
 4.Softmax output for multi-class classification
 
-6) Performnace Metrics :-
-Each layer is evaluated using:
-1.Accuracy
-2.Precision, Recall, F1-score
-3.Confusion Matrix
-4.ROC-AUC (for binary and multiclass settings)
+6) Why Multiple Models Were Used
+In this multi-tiered intrusion detection system (IDS) for Internet of Vehicles (IoV), a hybrid ensemble approach was employed to maximize accuracy, robustness, and generalization across different layers of classification. Here's why multiple models were used:
 
-Results :
-| Layer        | Accuracy | Precision | Recall | F1-score |
-|--------------|----------|-----------|--------|----------|
-| Layer 1      | 99.2%    | 0.993     | 0.991  | 0.992    |
-| Layer 2      | 98.6%    | 0.985     | 0.986  | 0.985    |
-| Layer 3 (MLP)| 97.8%    | 0.978     | 0.977  | 0.977    |
+1. Decision Tree Classifier :-Acts as a simple, interpretable baseline. Useful for benchmarking and understanding data splits.
 
+2. Random Forest Classifier :- An ensemble of decision trees. Reduces overfitting and improves stability. Used for binary classification in the first layer.
+
+3. Extra Trees Classifier :- Similar to Random Forest but more randomized. Provides faster training and better variance reduction.
+
+4. XGBoost Classifier :- Gradient boosting model known for speed and performance. Used in multiclass scenarios for detecting specific attack families.
+
+5. Stacking Classifier :- Meta-ensemble that combines multiple base models. Trains a final classifier on the predictions of previous models. Used to capture complementary strengths of different models and improve overall prediction accuracy.
 
