@@ -11,13 +11,13 @@ CICIDS2017 :- A widely-used dataset for evaluating intrusion detection models. I
 
 4)Preprocessing Steps:
 
-1.Null value removal :-  Converts categorical string labels into numerical values so they can be used in model.
+  1.Null value removal :-  Converts categorical string labels into numerical values so they can be used in model.
 
-2.Label encoding for categorical features :- Scales feature values to a standard range (0 to 1), improving model convergence and performance.
+  2.Label encoding for categorical features :- Scales feature values to a standard range (0 to 1), improving model convergence and performance.
 
-3.Feature scaling (MinMaxScaler) :- Scales feature values to a standard range (0 to 1), improving model convergence and performance.
+  3.Feature scaling (MinMaxScaler) :- Scales feature values to a standard range (0 to 1), improving model convergence and performance.
 
-4.One-hot encoding for multiclass labels :- Converts multiclass labels into a binary matrix (one column per class), necessary for neural networks.
+  4.One-hot encoding for multiclass labels :- Converts multiclass labels into a binary matrix (one column per class), necessary for neural networks.
 
 5)Model Architecture
 The MTH-IDS architecture consists of three hierarchical layers:
