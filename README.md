@@ -59,3 +59,7 @@ In this multi-tiered intrusion detection system (IDS) for Internet of Vehicles (
 
 5. Stacking Classifier :- Meta-ensemble that combines multiple base models. Trains a final classifier on the predictions of previous models. Used to capture complementary strengths of different models and improve overall prediction accuracy.
 
+Note: - This project is a replication and exploration of the research work titled "Multi-Tiered Hybrid Intrusion Detection System (MTH-IDS) for the Internet of Vehicles (IoV)".  I am not the original author of this research or the model architecture. I was highly intrigued by the methodology and effectiveness of the proposed system. Therefore, I chose to replicate the project using publicly available datasets and libraries, primarily for learning, experimentation, and further exploration.
+
+
+
