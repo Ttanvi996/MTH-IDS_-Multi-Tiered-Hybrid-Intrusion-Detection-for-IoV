@@ -51,9 +51,13 @@ Explanation :- Layer 3 uses a Deep Learning model (MLP) to classify attack types
 Model: Multi-Layer Perceptron (MLP) using TensorFlow/Keras
 
 Architecture:
+
 1.Input: Preprocessed features
+
 2.Dense layers with ReLU activation
+
 3.Dropout layers for regularization
+
 4.Softmax output for multi-class classification
 
 6)Why Multiple Models Were Used
