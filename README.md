@@ -23,9 +23,13 @@ CICIDS2017 :- A widely-used dataset for evaluating intrusion detection models. I
 The MTH-IDS architecture consists of three hierarchical layers:
 
 Layer 1: Anomaly Detection (Binary Classification)
-Goal : Differentiate between benign and malicious traffic. T
+
+Goal : Differentiate between benign and malicious traffic. 
+
 Explanation :-  The Label column is transformed into binary classes: 'BENIGN' vs. 'ATTACK'. All non-benign entries are grouped as 'ATTACK'.
+
 Models :Random Forest Classifier and Gradient Boosting Classifier
+
 Output: Flags suspicious entries to be further processed.
 
 Layer 2: Attack Family Classification (Multi-Class)
