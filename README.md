@@ -1,24 +1,27 @@
-Overview:-
+1)Overview:-
 The exponential growth of Internet of Vehicles (IoV) has heightened the need for intelligent and robust cybersecurity solutions. This project introduces MTH-IDS, a Multi-Tiered Hybrid Intrusion Detection System that integrates both Machine Learning (ML) and Deep Learning (DL) to identify malicious network behaviors across vehicular networks. MTH-IDS is designed to enhance detection accuracy while ensuring scalability and low latency suitable for real-time applications in IoV environments.
 
- Objective
+2)Objective
 
 To develop and evaluate a hybrid, layered IDS model that:
 1. Detects intrusions in vehicular ad-hoc networks (VANETs) with high accuracy.
+   
 2.Combines the strengths of multiple ML and DL algorithms.
+
 3.Implements tiered filtering for computational efficiency and hierarchical threat detection.
+
 4.Enhances the reliability of smart transportation systems.
 
-Dataset
+3)Dataset
 CICIDS2017 :- A widely-used dataset for evaluating intrusion detection models. It contains realistic network traffic, including benign and attack scenarios (e.g., DDoS, PortScan, Botnet, Infiltration, etc.)
 
-Preprocessing Steps:
+4)Preprocessing Steps:
 1.Null value removal
 2.Label encoding for categorical features
 3.Feature scaling (MinMaxScaler)
 4.One-hot encoding for multiclass labels
 
-Model Architecture
+5)Model Architecture
 The MTH-IDS architecture consists of three hierarchical layers:
 
 Layer 1: Anomaly Detection (Binary Classification)
@@ -40,6 +43,7 @@ Architecture:
 3.Dropout layers for regularization
 4.Softmax output for multi-class classification
 
+6) Performnace Metrics :-
 Each layer is evaluated using:
 1.Accuracy
 2.Precision, Recall, F1-score
