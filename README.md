@@ -46,6 +46,7 @@ Architecture:
 4.Softmax output for multi-class classification
 
 6) Why Multiple Models Were Used
+   
 In this multi-tiered intrusion detection system (IDS) for Internet of Vehicles (IoV), a hybrid ensemble approach was employed to maximize accuracy, robustness, and generalization across different layers of classification. Here's why multiple models were used:
 
 1. Decision Tree Classifier :-Acts as a simple, interpretable baseline. Useful for benchmarking and understanding data splits.
