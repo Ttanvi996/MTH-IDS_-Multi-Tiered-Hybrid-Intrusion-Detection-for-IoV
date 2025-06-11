@@ -10,9 +10,13 @@ Detects intrusions in vehicular ad-hoc networks (VANETs) with high accuracy. Com
 CICIDS2017 :- A widely-used dataset for evaluating intrusion detection models. It contains realistic network traffic, including benign and attack scenarios (e.g., DDoS, PortScan, Botnet, Infiltration, etc.)
 
 4)Preprocessing Steps:
+
 1.Null value removal :-  Converts categorical string labels into numerical values so they can be used in model.
+
 2.Label encoding for categorical features :- Scales feature values to a standard range (0 to 1), improving model convergence and performance.
+
 3.Feature scaling (MinMaxScaler) :- Scales feature values to a standard range (0 to 1), improving model convergence and performance.
+
 4.One-hot encoding for multiclass labels :- Converts multiclass labels into a binary matrix (one column per class), necessary for neural networks.
 
 5)Model Architecture
