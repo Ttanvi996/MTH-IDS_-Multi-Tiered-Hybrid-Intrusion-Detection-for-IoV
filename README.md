@@ -33,16 +33,23 @@ Models :Random Forest Classifier and Gradient Boosting Classifier
 Output: Flags suspicious entries to be further processed.
 
 Layer 2: Attack Family Classification (Multi-Class)
+
 Goal: Classify detected malicious traffic into broad categories (e.g., DDoS, Web attacks).
+
 Explanation :- This layer deals with multiple attack categories (e.g., DoS Hulk, DDoS, PortScan, etc.). A new subset of the data is created excluding benign traffic. Labels are retained as-is to train a classifier on attack types.
+
 Model : XGBoost Classifier
+
 Output: Filters and forwards samples for fine-grained analysis.
 
 Layer 3: Fine-Grained Attack Identification (Multiclass Deep Learning)
+
 Goal: Identify specific attack types within families.
-Explanation :- Layer 3 uses a Deep Learning model (MLP) to classify attack types at a granular level. Labels are one-hot encoded using to_categorical(). Features are scaled.
-Output with softmax for multi-class classification
+
+Explanation :- Layer 3 uses a Deep Learning model (MLP) to classify attack types at a granular level. Labels are one-hot encoded using to_categorical(). Features are scaled. Output with softmax for multi-class classification
+
 Model: Multi-Layer Perceptron (MLP) using TensorFlow/Keras
+
 Architecture:
 1.Input: Preprocessed features
 2.Dense layers with ReLU activation
