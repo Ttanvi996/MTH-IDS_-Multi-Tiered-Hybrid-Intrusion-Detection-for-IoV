@@ -19,22 +19,22 @@ CICIDS2017 :- A widely-used dataset for evaluating intrusion detection models. I
 
   + One-hot encoding for multiclass labels :- Converts multiclass labels into a binary matrix (one column per class), necessary for neural networks.
 
-+ 5)Model Architecture
+5)Model Architecture
 The MTH-IDS architecture consists of three hierarchical layers:
 
-Layer 1: Anomaly Detection (Binary Classification)
++ Layer 1: Anomaly Detection (Binary Classification)
 
-Goal : Differentiate between benign and malicious traffic. 
++ Goal : Differentiate between benign and malicious traffic. 
 
-Explanation :-  The Label column is transformed into binary classes: 'BENIGN' vs. 'ATTACK'. All non-benign entries are grouped as 'ATTACK'.
++ Explanation :-  The Label column is transformed into binary classes: 'BENIGN' vs. 'ATTACK'. All non-benign entries are grouped as 'ATTACK'.
 
-Models :Random Forest Classifier and Gradient Boosting Classifier
++ Models :Random Forest Classifier and Gradient Boosting Classifier
 
-Output: Flags suspicious entries to be further processed.
++ Output: Flags suspicious entries to be further processed.
 
-Layer 2: Attack Family Classification (Multi-Class)
++ Layer 2: Attack Family Classification (Multi-Class)
 
-Goal: Classify detected malicious traffic into broad categories (e.g., DDoS, Web attacks).
++ Goal: Classify detected malicious traffic into broad categories (e.g., DDoS, Web attacks).
 
 Explanation :- This layer deals with multiple attack categories (e.g., DoS Hulk, DDoS, PortScan, etc.). A new subset of the data is created excluding benign traffic. Labels are retained as-is to train a classifier on attack types.
 
